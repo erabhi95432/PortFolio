@@ -115,6 +115,7 @@ function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState({ type: '', text: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Monitor Scroll to set active Section in Header
   useEffect(() => {
@@ -183,15 +184,29 @@ function App() {
       {/* Header / Navbar */}
       <header>
         <div className="container nav-container">
-          <a href="#home" className="logo">
+          <a href="#home" className="logo" onClick={() => setIsMenuOpen(false)}>
             Abhi <span>Kumar</span>
           </a>
-          <ul className="nav-menu">
+          
+          <button 
+            className={`nav-toggle ${isMenuOpen ? 'open' : ''}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle navigation"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
+
+          <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
             <li>
               <a 
                 href="#home" 
                 className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
-                onClick={() => setActiveSection('home')}
+                onClick={() => {
+                  setActiveSection('home');
+                  setIsMenuOpen(false);
+                }}
               >
                 Home
               </a>
@@ -200,7 +215,10 @@ function App() {
               <a 
                 href="#about" 
                 className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-                onClick={() => setActiveSection('about')}
+                onClick={() => {
+                  setActiveSection('about');
+                  setIsMenuOpen(false);
+                }}
               >
                 About
               </a>
@@ -209,7 +227,10 @@ function App() {
               <a 
                 href="#skills" 
                 className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
-                onClick={() => setActiveSection('skills')}
+                onClick={() => {
+                  setActiveSection('skills');
+                  setIsMenuOpen(false);
+                }}
               >
                 Skills
               </a>
@@ -218,7 +239,10 @@ function App() {
               <a 
                 href="#projects" 
                 className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
-                onClick={() => setActiveSection('projects')}
+                onClick={() => {
+                  setActiveSection('projects');
+                  setIsMenuOpen(false);
+                }}
               >
                 Projects
               </a>
@@ -227,7 +251,10 @@ function App() {
               <a 
                 href="#contact" 
                 className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-                onClick={() => setActiveSection('contact')}
+                onClick={() => {
+                  setActiveSection('contact');
+                  setIsMenuOpen(false);
+                }}
               >
                 Contact
               </a>
