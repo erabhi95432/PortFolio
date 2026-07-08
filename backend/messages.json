@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1783478512012,
+    "name": "Test User",
+    "email": "test@example.com",
+    "message": "Hello from Antigravity!",
+    "timestamp": "2026-07-08T02:41:52.012Z"
+  },
+  {
+    "id": 1783478544675,
+    "name": "Abhishek",
+    "email": "abhi@example.com",
+    "message": "Hello from frontend!",
+    "timestamp": "2026-07-08T02:42:24.675Z"
+  },
+  {
+    "id": 1783478675879,
+    "name": "Browser Agent",
+    "email": "agent@test.com",
+    "message": "Testing the interactive MERN contact form from the browser!",
+    "timestamp": "2026-07-08T02:44:35.879Z"
+  },
+  {
+    "id": 1783482763599,
+    "name": "abhi",
+    "email": "abhikumar86064@gmail.com",
+    "message": "hlw\n",
+    "timestamp": "2026-07-08T03:52:43.599Z"
+  }
+]
