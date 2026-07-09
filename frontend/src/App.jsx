@@ -155,7 +155,10 @@ function App() {
     setStatus({ type: '', text: '' });
 
     try {
-      const response = await fetch('https://portfolio-dap2.onrender.com/api/contact', {
+      const apiUrl = import.meta.env.DEV 
+        ? 'http://localhost:5000/api/contact' 
+        : 'https://portfolio-dap2.onrender.com/api/contact';
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
