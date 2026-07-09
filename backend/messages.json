@@ -26,5 +26,19 @@
     "email": "abhikumar86064@gmail.com",
     "message": "hlw\n",
     "timestamp": "2026-07-08T03:52:43.599Z"
+  },
+  {
+    "id": 1783527448968,
+    "name": "Test User",
+    "email": "test@example.com",
+    "message": "Hello Abhishek, this is a test message to verify the email functionality.",
+    "timestamp": "2026-07-08T16:17:28.968Z"
+  },
+  {
+    "id": 1783527558899,
+    "name": "abhi",
+    "email": "agent@test.com",
+    "message": "hlw abhi give me answer",
+    "timestamp": "2026-07-08T16:19:18.899Z"
   }
 ]
